@@ -1,7 +1,7 @@
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 STYLES.CSS PAGE FOR hello-world-portfolio SITE
 KEY:
-font color:
+font color: #whitesmoke;
 background color:
 
 ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- */
@@ -13,10 +13,8 @@ BASIC SET UP
 
 * {
     box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 
 html,
@@ -28,17 +26,41 @@ body {
 }
 
 section {
-    padding: 40px 5px;
+    padding: 45px 5px;
 }
 
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    src: url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap") format("woff");
+}
+
+@supports (font-variation-settings: 'wdth' 200) {
+    @font-face {
+      font-family: Raleway;
+      src: url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      font-weight: normal;
+      font-style: normal;
+    }
 
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 HEADINGS
 ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- */
 h1, 
 h2, 
-h3,
- {
+h3, 
+h4 {
+    text-align: center;
+}
+
+h1, 
+h2 { 
+    font-weight: 300;
 
 }
 
@@ -51,16 +73,12 @@ h2 {
 }
 
 h3 {
-
+    font-size: 80%;
 }
 
 h4 {
 
 }
-
-/* ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-PARAGRAPHS
------ ----- ----- ----- ----- ----- ----- ----- ----- ----- */
 
 
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
@@ -74,6 +92,11 @@ ion-icon {
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 LINKS
 ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- */
+
+a {
+    text-decoration: none;
+}
+
 a:link,
 a:visited {
 
@@ -84,44 +107,6 @@ a:active {
 
 }
 
-
-/* ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-BUTTONS
------ ----- ----- ----- ----- ----- ----- ----- ----- ----- */
-.btn:link,
-.btn:visited,
-input[type=submit] {
-
-}
-
-.btn-full:link,
-.btn-full:visited,
-input[type=submit] {
-
-}
-
-.btn-ghost:link,
-.btn-ghost:visited {
-
-}
-
-.btn:hover,
-.btn:active,
-input[type=submit]:hover,
-input[type=submit]:active {
-
-}
-
-.btn-full:hover,
-.btn-full:active,
-input[type=submit] {
-
-}
-
-.btn-ghost:hover,
-.btn-ghost:active {
-
-}
 
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 HEADER
@@ -137,7 +122,9 @@ header {
 .main-nav {
     float: right;
     list-style: none;
-    margin-top: 45px;
+    margin-top: 35px;
+    text-transform: uppercase;
+    font-size: 90%;
 }
 
 .main-nav li {
@@ -147,27 +134,67 @@ header {
 
 .main-nav li a:link,
 .main-nav li a:visited {
-
+    padding: 8px 0;
+    color: whitesmoke;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
 }
 
 .main-nav li a:hover,
 .main-nav li a:active {
-
+    border-bottom: 2px solid whitesmoke;
 }
 
 .header-text {
+    margin-top: 50px;
     color: whitesmoke;
+    text-align: center;
+
 }
+
+.text-title {
+    font-style: italic;
+}
+
+.text-header {
+    font-style: italic;
+}
+
 
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 ABOUT ME
 ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- */
+.section-about {
+    padding: 5px;
+    margin-top: 15px;
+}
 
+.author-photo {
+
+}
+
+figcaption {
+    font-size: 75%;
+    font-style: italic;
+}
 
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 I'M LEARNING
 ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- */
+.section-skills {
+    background-image: url(img/gradient-sunset.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 98vh;
+    background-attachment: fixed;
+    color: whitesmoke;
+    text-align: center;
+}
 
+.skills-panel {
+    color: whitesmoke;
+}
 
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 PROJECTS
@@ -178,10 +205,16 @@ PROJECTS
 CONTACT ME
 ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- */
 
+
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 FORM
 ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- */
 
+
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 FOOTER
 ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- */
+.text-footer {
+    text-align: center;
+    font-size: 75%;
+}
